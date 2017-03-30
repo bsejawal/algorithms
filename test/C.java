@@ -1,11 +1,15 @@
 package test;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class C {
 
 	public static void main(String[] args) {
+		
+		
 
 //		System.out.println(isValidPassword("A2a"));
 		System.out.println(zipCode(5596, 6789));
