@@ -1,11 +1,9 @@
 package comparator;
 
-public class Student {
+public class Student implements Comparable<Student> {
 	private String firstName;
 	private String lastName;
 	private int age;
-	
-	
 
 	public Student(String firstName, String lastName, int age) {
 		this.firstName = firstName;
@@ -41,7 +39,10 @@ public class Student {
 	public String toString() {
 		return "Student [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + "]";
 	}
-	
-	
+
+	@Override
+	public int compareTo(Student o) {
+		return this.lastName.compareTo(o.lastName);
+	}
 
 }

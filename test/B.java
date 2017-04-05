@@ -1,11 +1,7 @@
 package test;
 
 
-public class B extends A{
-	
-	B(int i){
-		System.out.println("B(int i) = "+i);
-	}
+public  class B extends A{
 
 	@Override
 	public void te() {
@@ -14,14 +10,10 @@ public class B extends A{
 	}
 
 	@Override
-	protected void t() {
+	public void t() {
 		// TODO Auto-generated method stub
 		
 	}
-
-
-	
-	
-	
+		
 
 }

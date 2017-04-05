@@ -1,8 +1,6 @@
 package test;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 public class C {
@@ -10,9 +8,12 @@ public class C {
 	public static void main(String[] args) {
 		
 		
+		
 
-//		System.out.println(isValidPassword("A2a"));
-		System.out.println(zipCode(5596, 6789));
+		
+
+		// System.out.println(isValidPassword("A2a"));
+//		System.out.println(zipCode(5596, 6789));
 
 	}
 
@@ -37,15 +38,14 @@ public class C {
 			s += b.charAt(i);
 		}
 		s += restDigit;
-		
+
 		double zipCode = Double.parseDouble(s);
 		int ret = -1;
-		if(zipCode < 100000000)
-			ret  = (int) zipCode;
+		if (zipCode < 100000000)
+			ret = (int) zipCode;
 		Queue<String> q = new LinkedList();
 		return ret;
-		
-		
+
 	}
 
 	public static int isValidPassword(String password) {
