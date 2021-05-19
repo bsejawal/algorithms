@@ -35,7 +35,7 @@ public class ReverseIntegerTest {
     }
 
 
-    //    The reverse of 1534236469 is 9646324351, which is larger than Integer.MAX_VALUE, so your code will result in numeric overflow and an incorrect result.
+    //    The reverse of 1534236469 is 9646324351, which is larger than Integer.MAX_VALUE, so the code will result in numeric overflow and so it returns 0 instead of incorrect result.
     @Test
     @DisplayName("Test with greater than Integer.MAX_VALUE")
     public void testWithIntegerMaxValue(){
