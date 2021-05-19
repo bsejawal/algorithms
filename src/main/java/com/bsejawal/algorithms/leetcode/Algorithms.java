@@ -35,7 +35,6 @@ public class Algorithms {
          * @return reversed integer
          */
     public  int reverseInteger(int n) {
-
         int reversed = 0 ;
         while(n!=0){
             int tempReversed = (reversed * 10) + (n%10);
@@ -43,8 +42,35 @@ public class Algorithms {
                 return 0;
             reversed = tempReversed;
             n = n/10;
-
         }
         return reversed;
+    }
+
+    /**
+     * https://leetcode.com/problems/palindrome-number/
+     * @param n
+     * @return
+     */
+    public boolean isPalindromeNumber(int n) {
+        if(n==0) // return true since only zero is palindrome
+            return true;
+        if(n<0 || n%10 == 0) // return false if any negative numbers and number divisible by 10
+            return false;
+
+        //reversing number
+        int initialNumber = n;
+        int reversed = 0;
+        while(n!=0){
+            int tempReversed = reversed * 10 + n%10;
+            if(tempReversed/10 != reversed)
+                return false;
+            reversed = tempReversed;
+            n/=10;
+        }
+        if(initialNumber == reversed)
+            return true;
+
+
+        return false;
     }
 }
