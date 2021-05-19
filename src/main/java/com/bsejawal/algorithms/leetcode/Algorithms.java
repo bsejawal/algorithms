@@ -6,7 +6,7 @@ public class Algorithms {
      * @param n
      * @return reversed integer
      */
-    private  int reverseInteger(int n) {
+    public  int reverseInteger(int n) {
 
         int reversed = 0 ;
         while(n!=0){
