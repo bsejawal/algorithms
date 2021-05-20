@@ -29,11 +29,11 @@ public class Algorithms {
     }
 
 
-        /**
-         * https://leetcode.com/problems/reverse-integer/
-         * @param n
-         * @return reversed integer
-         */
+    /**
+     * https://leetcode.com/problems/reverse-integer/
+     * @param n
+     * @return reversed integer
+     */
     public  int reverseInteger(int n) {
         int reversed = 0 ;
         while(n!=0){
@@ -100,5 +100,24 @@ public class Algorithms {
             }
         }
         return result;
+    }
+
+    /**
+     * https://leetcode.com/problems/longest-common-prefix/
+     * @param strings
+     * @return
+     */
+    public String longestCommonPrefix(String[] strings) {
+        String prefix = "";
+        if(strings.length == 0 || strings == null)
+            return prefix;
+        prefix = strings[0];
+
+        for(int i=1; i<strings.length; i++){
+            while(strings[i].indexOf(prefix) != 0){
+                prefix = prefix.substring(0, prefix.length()-1);
+            }
+        }
+        return prefix;
     }
 }
