@@ -2,6 +2,7 @@ package com.bsejawal.algorithms.leetcode;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Stack;
 
 public class Algorithms {
 
@@ -119,5 +120,29 @@ public class Algorithms {
             }
         }
         return prefix;
+    }
+
+    /**
+     * https://leetcode.com/problems/valid-parentheses/
+     * @param s
+     * @return
+     */
+    public boolean isValidParentheses(String s) {
+        if(s.length()<2)
+            return false;
+        Stack<Character> stack = new Stack<>();
+        for (Character c : s.toCharArray()){
+            if(c.equals('(') || c.equals('{') || c.equals('['))
+                stack.push(c);
+            else if(c.equals(')') && !stack.empty() && stack.peek().equals('('))
+                stack.pop();
+            else if(c.equals('}') && !stack.empty() && stack.peek().equals('{'))
+                stack.pop();
+            else if(c.equals(']') && !stack.empty() && stack.peek().equals('['))
+                stack.pop();
+            else
+                return false;
+        }
+        return stack.isEmpty();
     }
 }
