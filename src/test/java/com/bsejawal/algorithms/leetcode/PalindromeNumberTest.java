@@ -30,6 +30,7 @@ public class PalindromeNumberTest {
         assertFalse(algorithms.isPalindromeNumber(-121));
     }
 
+    //Reads 01 from right to left. Therefore it is not a palindrome.
     @Test
     @DisplayName("With Invalid Number")
     public void testWithInvalidNumber(){
