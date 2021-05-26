@@ -1,5 +1,7 @@
 package com.bsejawal.algorithms.leetcode;
 
+import com.bsejawal.algorithms.leetcode.node.Node;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
@@ -134,15 +136,47 @@ public class Algorithms {
         for (Character c : s.toCharArray()){
             if(c.equals('(') || c.equals('{') || c.equals('['))
                 stack.push(c);
-            else if(c.equals(')') && !stack.empty() && stack.peek().equals('('))
+            else if(c.equals(')') && !stack.isEmpty() && stack.peek().equals('('))
                 stack.pop();
-            else if(c.equals('}') && !stack.empty() && stack.peek().equals('{'))
+            else if(c.equals('}') && !stack.isEmpty() && stack.peek().equals('{'))
                 stack.pop();
-            else if(c.equals(']') && !stack.empty() && stack.peek().equals('['))
+            else if(c.equals(']') && !stack.isEmpty() && stack.peek().equals('['))
                 stack.pop();
             else
                 return false;
         }
         return stack.isEmpty();
+    }
+
+
+
+    /**
+     * https://leetcode.com/problems/merge-two-sorted-lists/
+     * @param l1
+     * @param l2
+     * @return
+     */
+    public Node mergeTwoSortedLinkedLists(Node l1, Node l2) {
+        Node headNode = new Node(0);
+        Node currentNode = headNode;
+
+        while(l1 !=null && l2 !=null){
+
+            if(l1.val < l2.val){
+                currentNode.next = l1;
+                l1 = l1.next;
+            }else{
+                currentNode.next = l2;
+                l2 = l2.next;
+            }
+            currentNode = currentNode.next;
+        }
+        if(l1!=null){
+            currentNode = l1;
+        }
+        if(l2 !=null){
+            currentNode = l2;
+        }
+        return headNode.next;
     }
 }
