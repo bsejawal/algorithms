@@ -10,11 +10,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ValidParenthesesTest {
 
-    private Algorithms algorithms;
+    private LeetcodeEasyAlgorithm algorithms;
 
     @BeforeEach
     public void setUp(){
-        algorithms = new Algorithms();
+        algorithms = new LeetcodeEasyAlgorithm();
     }
 
     @Test
@@ -45,6 +45,12 @@ public class ValidParenthesesTest {
     @DisplayName("Input: s ={[]}, Output: true")
     public void testWithValidInnerParentheses(){
         assertTrue(algorithms.isValidParentheses("{[]}"));
+    }
+
+    @Test
+    @DisplayName("Input: s ={[]}, Output: true")
+    public void testWithInValidInnerParentheses(){
+        assertFalse(algorithms.isValidParentheses("]}{["));
     }
 
 }

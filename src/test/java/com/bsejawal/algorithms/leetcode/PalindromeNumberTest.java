@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class PalindromeNumberTest {
 
-    private Algorithms algorithms;
+    private LeetcodeEasyAlgorithm algorithms;
 
     @BeforeEach
     public void setUp() throws Exception{
-        algorithms = new Algorithms();
+        algorithms = new LeetcodeEasyAlgorithm();
     }
 
     @Test

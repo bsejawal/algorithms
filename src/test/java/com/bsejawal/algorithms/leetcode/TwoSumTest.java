@@ -8,12 +8,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 
 public class TwoSumTest {
-    private Algorithms algorithms;
+    private LeetcodeEasyAlgorithm algorithms;
 
     @BeforeEach
     public void setUp() throws Exception
     {
-        algorithms = new Algorithms();
+        algorithms = new LeetcodeEasyAlgorithm();
     }
 
     @Test

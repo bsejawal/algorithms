@@ -6,11 +6,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class MergeTwoSortedLinkedListsTest {
-    private Algorithms algorithms;
+    private LeetcodeEasyAlgorithm algorithms;
 
     @BeforeEach
     public void setUp(){
-        algorithms = new Algorithms();
+        algorithms = new LeetcodeEasyAlgorithm();
     }
 //    mergeTwoSortedLinkedLists
 

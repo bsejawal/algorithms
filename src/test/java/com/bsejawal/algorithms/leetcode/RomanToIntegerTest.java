@@ -8,11 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RomanToIntegerTest {
 
-    private Algorithms algorithms;
+    private LeetcodeEasyAlgorithm algorithms;
 
     @BeforeEach
     public void setUp(){
-        algorithms = new Algorithms();
+        algorithms = new LeetcodeEasyAlgorithm();
     }
 
 

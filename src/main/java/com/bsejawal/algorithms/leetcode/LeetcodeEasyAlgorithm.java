@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
-public class Algorithms {
+public class LeetcodeEasyAlgorithm {
 
     /**
      * https://leetcode.com/problems/two-sum/
@@ -178,5 +178,26 @@ public class Algorithms {
             currentNode = l2;
         }
         return headNode.next;
+    }
+
+    /**
+     * https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+     * @param input
+     * @return
+     */
+    public int removeDuplicatesFromSortedArray(int[] input) {
+
+        int index=1;
+        for(int i=0;i<input.length-1; i++){
+            if(input[i] != input[i+1]){
+                input[index++] = input[i+1];
+            }
+        }
+        return index;
+    }
+
+    public int removeElement(int[] input, int i) {
+
+        return 0;
     }
 }

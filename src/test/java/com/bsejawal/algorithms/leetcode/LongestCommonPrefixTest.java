@@ -8,22 +8,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LongestCommonPrefixTest {
 
-    private Algorithms algorithms;
+    private LeetcodeEasyAlgorithm algorithm;
 
     @BeforeEach
     public void setUp(){
-        algorithms = new Algorithms();
+        algorithm = new LeetcodeEasyAlgorithm();
     }
 
     @Test
     @DisplayName("Valid Parameter Test, input : [\"flower\",\"flow\",\"flight\"], output fl ")
     public void testSimpleValidParameter(){
-        assertEquals("fl", algorithms.longestCommonPrefix(new String[]{"flower","flow","flight"}));
+        assertEquals("fl", algorithm.longestCommonPrefix(new String[]{"flower","flow","flight"}));
     }
 
     @Test
     @DisplayName("Valid Parameter Test, input : [\"dog\",\"racecar\",\"car\"], output is empty String ")
     public void testForEmptyOutput(){
-        assertEquals("", algorithms.longestCommonPrefix(new String[]{"dog","racecar","car"}));
+        assertEquals("", algorithm.longestCommonPrefix(new String[]{"dog","racecar","car"}));
     }
 }
