@@ -6,7 +6,6 @@ target/
 *.DS_Store
 
 .gradle
-.gradle/**
 **/build/
 !src/**/build/
 out*
