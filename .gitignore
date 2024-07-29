@@ -25,5 +25,3 @@ out*
 *.iws
 *.iml
 *.ipr
-.gradle
-build/
