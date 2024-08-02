@@ -57,18 +57,38 @@ public class LinkedList {
         }
         return temp;
     }
-    public void prepend(int value){
+
+    public void prepend(int value) {
         Node newNode = new Node(value);
-        if(length == 0){
+        if (length == 0) {
             head = newNode;
             tail = newNode;
-        }else{
+        } else {
             Node temp = head;
             newNode.next = temp;
             head = newNode;
         }
         length++;
+    }
 
+    public Node removeFirst() {
+        if (length == 0) return null;
+        Node temp = head;
+        head = temp.next;
+        temp.next = null;
+        length--;
+        if (length == 0)
+            tail = null;
+        return temp;
+    }
+
+    public Node get(int index){
+        if(index < 0 || index >= length) return null;
+        Node temp = head;
+        for(int i =0; i< index; i++){
+            temp = temp.next;
+        }
+        return temp;
     }
 
     public void getHead() {
