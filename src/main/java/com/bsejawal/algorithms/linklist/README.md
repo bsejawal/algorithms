@@ -1,5 +1,5 @@
-## Linked List
-#### Find the middle node in LinkedList
+# Linked List
+### Find the middle node in LinkedList
 [code is here](https://github.com/bsejawal/algorithms/blob/96c1afd740112c9dcaa0f6fe82575f892d327107/src/main/java/com/bsejawal/algorithms/linklist/LinkedList.java#L154) 
 ```
  public Node findMiddleNode(){
